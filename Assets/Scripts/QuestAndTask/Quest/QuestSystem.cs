@@ -76,7 +76,7 @@ public class QuestSystem : MonoBehaviour
 
         if (newQuest is Achievement)
         {
-            newQuest.onCompleted += OnAchievementCompleted;
+            newQuest.OnCompleted += OnAchievementCompleted;
 
             activeAchievements.Add(newQuest);
 
@@ -85,8 +85,8 @@ public class QuestSystem : MonoBehaviour
         }
         else
         {
-            newQuest.onCompleted += OnQuestCompleted;
-            newQuest.onCanceled += OnQuestCanceled;
+            newQuest.OnCompleted += OnQuestCompleted;
+            newQuest.OnCanceled += OnQuestCanceled;
 
             activeQuests.Add(newQuest);
 

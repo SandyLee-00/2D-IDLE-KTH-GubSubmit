@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Category" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAgABAAIAAAgAAAAAAAAAAAAIAAAAAAAAAAAiA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Category\Category.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Achievement" Collapsed="true">
+    <Position X="0.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Quest\Achievement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Condition" Collapsed="true">
+    <Position X="14" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Quest\Condition\Condition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerPrefsUtility" Collapsed="true">
+    <Position X="17.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Quest\PlayerPrefsUtility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Quest" Collapsed="true">
+    <Position X="0.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>pQLA0AQwQrAgIAIgIAIAAAAAAAAAABAEAQEYBAEAChA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Quest\Quest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuestGiver" Collapsed="true">
+    <Position X="14" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Quest\QuestGiver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuestReporter" Collapsed="true">
+    <Position X="15.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAQAAAAIAgAAAAAAEAAAAAAQAAIAAAABAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Quest\QuestReporter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuestSystem" Collapsed="true">
+    <Position X="17.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EVIAEBEAAAAAMBCAEKAEAAQIAADLBAAAQAQQAAAUIEI=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Quest\QuestSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuestTracker" Collapsed="true">
+    <Position X="12.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAACAgAABAAAAAAJAAAACAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Quest\QuestTracker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuestTrackerView" Collapsed="true">
+    <Position X="14" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAABAAAAACQAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Quest\QuestTrackerView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Reward" Collapsed="true">
+    <Position X="5.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAIAAAAAAAAAAAAACACQAAgAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Quest\Reward\Reward.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaskDescriptor" Collapsed="true">
+    <Position X="12.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEgAAAAAACAAAQAAwAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Quest\TaskDescriptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuestDatabase" Collapsed="true">
+    <Position X="12.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAgAAgEAAAAAAAAAAAAAAgAAAAAAAACAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\QuestDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="currentReward" Collapsed="true">
+    <Position X="5.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Reward\currentReward.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ContinousCount" Collapsed="true">
+    <Position X="5.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Task\Action\ContinousCount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NegativeCount" Collapsed="true">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Task\Action\NegativeCount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PositiveCount" Collapsed="true">
+    <Position X="9.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Task\Action\PositiveCount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleCount" Collapsed="true">
+    <Position X="0.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Task\Action\SimpleCount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleSet" Collapsed="true">
+    <Position X="3" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Task\Action\SimpleSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaskAction" Collapsed="true">
+    <Position X="5.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Task\Action\TaskAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InitialSuccessValue" Collapsed="true">
+    <Position X="15.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Task\InitialSuccessValue\InitialSuccessValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Subtask" Collapsed="true">
+    <Position X="15.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BwIABQCgCCAgIAYAIAAAAABAAAAAAAEEAABJBAQAiAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Task\Subtask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SubtaskGroup" Collapsed="true">
+    <Position X="17.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQIAAACACiAAAAIAAAAAAAAAAAAAAAgAAAAIBAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Task\SubtaskGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjectTarget" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAACAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Task\Target\GameObjectTarget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StringTarget" Collapsed="true">
+    <Position X="2.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAACAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Task\Target\StringTarget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaskTarget" Collapsed="true">
+    <Position X="1.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Task\Target\TaskTarget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="QuestState" Collapsed="true">
+    <Position X="12.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAQAAAAAIAAAAAAAAAAEAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Quest\Quest.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TaskState" Collapsed="true">
+    <Position X="15.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAIAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Task\Subtask.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TaskGroupState" Collapsed="true">
+    <Position X="14" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAIAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\QuestAndTask\Task\SubtaskGroup.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Malgun Gothic" Size="9" />
+</ClassDiagram>

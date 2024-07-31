@@ -75,10 +75,10 @@ public class Quest : ScriptableObject
     public virtual bool IsCancelable => isCancelable && cancelConditions.All(x => x.IsPass(this));
     public bool IsAcceptable => acceptionConditions.All(x => x.IsPass(this));
 
-    public event TaskSuccessChangedHandler onTaskSuccessChanged;
-    public event CompletedHandler onCompleted;
-    public event CanceledHandler onCanceled;
-    public event NewTaskGroupHandler onNewTaskGroup;
+    public event TaskSuccessChangedHandler OnTaskSuccessChanged;
+    public event CompletedHandler OnCompleted;
+    public event CanceledHandler OnCanceled;
+    public event NewTaskGroupHandler OnNewTaskGroup;
 
     public void OnRegister()
     {
@@ -89,7 +89,7 @@ public class Quest : ScriptableObject
         {
             taskGroup.Setup(this);
             foreach (var task in taskGroup.Tasks)
-                task.onSuccessChanged += OnSuccessChanged;
+                task.OnSuccessChanged += OnSuccessChanged;
         }
 
         State = QuestState.Running;
@@ -119,7 +119,7 @@ public class Quest : ScriptableObject
                 var prevTasKGroup = taskGroups[currentTaskGroupIndex++];
                 prevTasKGroup.End();
                 CurrentTaskGroup.Start();
-                onNewTaskGroup?.Invoke(this, CurrentTaskGroup, prevTasKGroup);
+                OnNewTaskGroup?.Invoke(this, CurrentTaskGroup, prevTasKGroup);
             }
         }
         else
@@ -138,12 +138,12 @@ public class Quest : ScriptableObject
         foreach (var reward in rewards)
             reward.Give(this);
 
-        onCompleted?.Invoke(this);
+        OnCompleted?.Invoke(this);
 
-        onTaskSuccessChanged = null;
-        onCompleted = null;
-        onCanceled = null;
-        onNewTaskGroup = null;
+        OnTaskSuccessChanged = null;
+        OnCompleted = null;
+        OnCanceled = null;
+        OnNewTaskGroup = null;
     }
 
     public virtual void Cancel()
@@ -152,7 +152,7 @@ public class Quest : ScriptableObject
         Debug.Assert(IsCancelable, "This quest can't be canceled");
 
         State = QuestState.Cancel;
-        onCanceled?.Invoke(this);
+        OnCanceled?.Invoke(this);
     }
 
     public Quest Clone()
@@ -164,7 +164,7 @@ public class Quest : ScriptableObject
     }
 
     private void OnSuccessChanged(Subtask task, int currentSuccess, int prevSuccess)
-        => onTaskSuccessChanged?.Invoke(this, task, currentSuccess, prevSuccess);
+        => OnTaskSuccessChanged?.Invoke(this, task, currentSuccess, prevSuccess);
 
     [Conditional("UNITY_EDITOR")]
     private void CheckIsRunning()

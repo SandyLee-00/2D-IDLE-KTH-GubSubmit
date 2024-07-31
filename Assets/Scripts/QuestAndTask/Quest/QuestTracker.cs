@@ -18,14 +18,14 @@ public class QuestTracker : MonoBehaviour
     {
         if (targetQuest != null)
         {
-            targetQuest.onNewTaskGroup -= UpdateTaskDescriptos;
-            targetQuest.onCompleted -= DestroySelf;
+            targetQuest.OnNewTaskGroup -= UpdateTaskDescriptos;
+            targetQuest.OnCompleted -= DestroySelf;
         }
 
         foreach (var tuple in taskDesriptorsByTask)
         {
             var task = tuple.Key;
-            task.onSuccessChanged -= UpdateText;
+            task.OnSuccessChanged -= UpdateText;
         }
     }
 
@@ -39,8 +39,8 @@ public class QuestTracker : MonoBehaviour
 
         questTitleText.color = titleColor;
 
-        targetQuest.onNewTaskGroup += UpdateTaskDescriptos;
-        targetQuest.onCompleted += DestroySelf;
+        targetQuest.OnNewTaskGroup += UpdateTaskDescriptos;
+        targetQuest.OnCompleted += DestroySelf;
 
         var taskGroups = targetQuest.TaskGroups;
         UpdateTaskDescriptos(targetQuest, taskGroups[0]);
@@ -64,7 +64,7 @@ public class QuestTracker : MonoBehaviour
         {
             var taskDesriptor = Instantiate(taskDescriptorPrefab, transform);
             taskDesriptor.UpdateText(task);
-            task.onSuccessChanged += UpdateText;
+            task.OnSuccessChanged += UpdateText;
 
             taskDesriptorsByTask.Add(task, taskDesriptor);
         }
