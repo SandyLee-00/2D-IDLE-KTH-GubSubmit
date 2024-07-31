@@ -42,8 +42,8 @@ public class Subtask : ScriptableObject
     private TaskState state;
     private int currectSuccess;
 
-    public event StateChangedHandler OnStateChanged;
-    public event SuccessChangedHandler OnSuccessChanged;
+    public event StateChangedHandler OnSubtaskStateChanged;
+    public event SuccessChangedHandler OnSubtaskSuccessChanged;
 
     public int CurrentSuccess
     {
@@ -56,7 +56,7 @@ public class Subtask : ScriptableObject
             if (currectSuccess != prevSuccess)
             {
                 state = currectSuccess == needSuccessToCompleted ? TaskState.Complete : TaskState.Running;
-                OnSuccessChanged?.Invoke(this, currectSuccess, prevSuccess);
+                OnSubtaskSuccessChanged?.Invoke(this, currectSuccess, prevSuccess);
             }
         }
     }
@@ -73,7 +73,9 @@ public class Subtask : ScriptableObject
         {
             var prevState = state;
             state = value;
-            OnStateChanged?.Invoke(this, state, prevState);
+
+            // TODO : 이전이랑 다른지 체크 로직상 필요?
+            OnSubtaskStateChanged?.Invoke(this, state, prevState);
         }
     }
 
@@ -97,8 +99,8 @@ public class Subtask : ScriptableObject
 
     public void End()
     {
-        OnStateChanged = null;
-        OnSuccessChanged = null;
+        OnSubtaskStateChanged = null;
+        OnSubtaskSuccessChanged = null;
     }
 
 

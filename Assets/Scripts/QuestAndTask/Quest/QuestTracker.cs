@@ -25,7 +25,7 @@ public class QuestTracker : MonoBehaviour
         foreach (var tuple in taskDesriptorsByTask)
         {
             var task = tuple.Key;
-            task.OnSuccessChanged -= UpdateText;
+            task.OnSubtaskSuccessChanged -= UpdateText;
         }
     }
 
@@ -64,7 +64,7 @@ public class QuestTracker : MonoBehaviour
         {
             var taskDesriptor = Instantiate(taskDescriptorPrefab, transform);
             taskDesriptor.UpdateText(task);
-            task.OnSuccessChanged += UpdateText;
+            task.OnSubtaskSuccessChanged += UpdateText;
 
             taskDesriptorsByTask.Add(task, taskDesriptor);
         }

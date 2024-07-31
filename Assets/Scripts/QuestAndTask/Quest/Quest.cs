@@ -75,7 +75,7 @@ public class Quest : ScriptableObject
     public virtual bool IsCancelable => isCancelable && cancelConditions.All(x => x.IsPass(this));
     public bool IsAcceptable => acceptionConditions.All(x => x.IsPass(this));
 
-    public event TaskSuccessChangedHandler OnTaskSuccessChanged;
+    public event TaskSuccessChangedHandler OnSubtaskSuccessChanged;
     public event CompletedHandler OnCompleted;
     public event CanceledHandler OnCanceled;
     public event NewTaskGroupHandler OnNewTaskGroup;
@@ -89,7 +89,7 @@ public class Quest : ScriptableObject
         {
             taskGroup.Setup(this);
             foreach (var task in taskGroup.Tasks)
-                task.OnSuccessChanged += OnSuccessChanged;
+                task.OnSubtaskSuccessChanged += ChangeSubtaskSuccess;
         }
 
         State = QuestState.Running;
@@ -140,7 +140,7 @@ public class Quest : ScriptableObject
 
         OnCompleted?.Invoke(this);
 
-        OnTaskSuccessChanged = null;
+        OnSubtaskSuccessChanged = null;
         OnCompleted = null;
         OnCanceled = null;
         OnNewTaskGroup = null;
@@ -163,8 +163,10 @@ public class Quest : ScriptableObject
         return clone;
     }
 
-    private void OnSuccessChanged(Subtask task, int currentSuccess, int prevSuccess)
-        => OnTaskSuccessChanged?.Invoke(this, task, currentSuccess, prevSuccess);
+    private void ChangeSubtaskSuccess(Subtask task, int currentSuccess, int prevSuccess)
+    {
+        OnSubtaskSuccessChanged?.Invoke(this, task, currentSuccess, prevSuccess);
+    }
 
     [Conditional("UNITY_EDITOR")]
     private void CheckIsRunning()
