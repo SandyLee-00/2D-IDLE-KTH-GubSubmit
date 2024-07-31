@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Quest/Task/Target/GameObjectTarget", fileName = "GameObjectTarget")] 
+[CreateAssetMenu(menuName = "Quest/Subtask/Target/GameObjectTarget", fileName = "GameObjectTarget")] 
 public class GameObjectTarget : TaskTarget
 {
     [SerializeField] private GameObject value;

@@ -9,18 +9,18 @@ public enum TaskState
 }
 
 
-[CreateAssetMenu(menuName = "Quest/Task/Task", fileName = "Task_")]
-public class Task : ScriptableObject
+[CreateAssetMenu(menuName = "Quest/Subtask/Subtask", fileName = "Task_")]
+public class Subtask : ScriptableObject
 {
     #region Events
-    public delegate void StateChangedHandler(Task task, TaskState currentState, TaskState prevState);
-    public delegate void SuccessChangedHandler(Task task, int currentSuccess, int prevSuceess);
+    public delegate void StateChangedHandler(Subtask task, TaskState currentState, TaskState prevState);
+    public delegate void SuccessChangedHandler(Subtask task, int currentSuccess, int prevSuceess);
     #endregion
 
     [Header("Category")]
     [SerializeField] private Category category;
 
-    [Header("Task")]
+    [Header("Subtask")]
     [SerializeField] private string codeName;
     [SerializeField] private string description;
 

@@ -10,7 +10,7 @@ public class QuestTracker : MonoBehaviour
     [SerializeField]
     private TaskDescriptor taskDescriptorPrefab;
 
-    private Dictionary<Task, TaskDescriptor> taskDesriptorsByTask = new Dictionary<Task, TaskDescriptor>();
+    private Dictionary<Subtask, TaskDescriptor> taskDesriptorsByTask = new Dictionary<Subtask, TaskDescriptor>();
 
     private Quest targetQuest;
 
@@ -58,7 +58,7 @@ public class QuestTracker : MonoBehaviour
         }
     }
 
-    private void UpdateTaskDescriptos(Quest quest, TaskGroup currentTaskGroup, TaskGroup prevTaskGroup = null)
+    private void UpdateTaskDescriptos(Quest quest, SubtaskGroup currentTaskGroup, SubtaskGroup prevTaskGroup = null)
     {
         foreach (var task in currentTaskGroup.Tasks)
         {
@@ -79,7 +79,7 @@ public class QuestTracker : MonoBehaviour
         }
     }
 
-    private void UpdateText(Task task, int currentSucess, int prevSuccess)
+    private void UpdateText(Subtask task, int currentSucess, int prevSuccess)
     {
         taskDesriptorsByTask[task].UpdateText(task);
     }

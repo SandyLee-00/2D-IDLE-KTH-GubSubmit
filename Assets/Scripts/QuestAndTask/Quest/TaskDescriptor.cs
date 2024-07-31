@@ -23,7 +23,7 @@ public class TaskDescriptor : MonoBehaviour
         this.text.text = text;
     }
 
-    public void UpdateText(Task task)
+    public void UpdateText(Subtask task)
     {
         text.fontStyle = FontStyles.Normal;
 
@@ -36,14 +36,14 @@ public class TaskDescriptor : MonoBehaviour
             text.text = BuildText(task, ColorUtility.ToHtmlStringRGB(normalColor), ColorUtility.ToHtmlStringRGB(taskSuccessCountColor));
     }
 
-    public void UpdateTextUsingStrikeThrough(Task task)
+    public void UpdateTextUsingStrikeThrough(Subtask task)
     {
         var colorCode = ColorUtility.ToHtmlStringRGB(strikeThroughColor);
         text.fontStyle = FontStyles.Strikethrough;
         text.text = BuildText(task, colorCode, colorCode);
     }
 
-    private string BuildText(Task task, string textColorCode, string successCountColorCode)
+    private string BuildText(Subtask task, string textColorCode, string successCountColorCode)
     {
         return $"<color=#{textColorCode}>¡Ü {task.Description} <color=#{successCountColorCode}>{task.CurrentSuccess}</color>/{task.NeedSuccessToCompleted}</color>";
     }

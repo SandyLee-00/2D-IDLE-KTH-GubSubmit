@@ -18,10 +18,10 @@ public enum QuestState
 public class Quest : ScriptableObject
 {
     #region Events
-    public delegate void TaskSuccessChangedHandler(Quest quest, Task task, int currentSuccess, int prevSuccess);
+    public delegate void TaskSuccessChangedHandler(Quest quest, Subtask task, int currentSuccess, int prevSuccess);
     public delegate void CompletedHandler(Quest quest);
     public delegate void CanceledHandler(Quest quest);
-    public delegate void NewTaskGroupHandler(Quest quest, TaskGroup currentTaskGroup, TaskGroup prevTaskGroup);
+    public delegate void NewTaskGroupHandler(Quest quest, SubtaskGroup currentTaskGroup, SubtaskGroup prevTaskGroup);
     #endregion
 
     [SerializeField]
@@ -37,9 +37,9 @@ public class Quest : ScriptableObject
     [SerializeField, TextArea]
     private string description;
 
-    [Header("Task")]
+    [Header("Subtask")]
     [SerializeField]
-    private TaskGroup[] taskGroups;
+    private SubtaskGroup[] taskGroups;
 
     [Header("Reward")]
     [SerializeField]
@@ -65,8 +65,8 @@ public class Quest : ScriptableObject
     public string DisplayName => displayName;
     public string Description => description;
     public QuestState State { get; private set; }
-    public TaskGroup CurrentTaskGroup => taskGroups[currentTaskGroupIndex];
-    public IReadOnlyList<TaskGroup> TaskGroups => taskGroups;
+    public SubtaskGroup CurrentTaskGroup => taskGroups[currentTaskGroupIndex];
+    public IReadOnlyList<SubtaskGroup> TaskGroups => taskGroups;
     public IReadOnlyList<Reward> Rewards => rewards;
     public bool IsRegistered => State != QuestState.Inactive;
     public bool IsComplatable => State == QuestState.WaitingForCompletion;
@@ -158,12 +158,12 @@ public class Quest : ScriptableObject
     public Quest Clone()
     {
         var clone = Instantiate(this);
-        clone.taskGroups = taskGroups.Select(x => new TaskGroup(x)).ToArray();
+        clone.taskGroups = taskGroups.Select(x => new SubtaskGroup(x)).ToArray();
 
         return clone;
     }
 
-    private void OnSuccessChanged(Task task, int currentSuccess, int prevSuccess)
+    private void OnSuccessChanged(Subtask task, int currentSuccess, int prevSuccess)
         => onTaskSuccessChanged?.Invoke(this, task, currentSuccess, prevSuccess);
 
     [Conditional("UNITY_EDITOR")]

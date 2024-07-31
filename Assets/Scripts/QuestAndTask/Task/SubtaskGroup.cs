@@ -11,18 +11,18 @@ public enum TaskGroupState
 }
 
 [System.Serializable]
-public class TaskGroup
+public class SubtaskGroup
 {
     [SerializeField]
-    private Task[] tasks;
+    private Subtask[] tasks;
 
-    public IReadOnlyList<Task> Tasks => tasks;
+    public IReadOnlyList<Subtask> Tasks => tasks;
     public Quest Owner { get; private set; }
     public bool IsAllTaskComplete => tasks.All(x => x.IsComplete);
     public bool IsComplete => State == TaskGroupState.Complete;
     public TaskGroupState State { get; private set; }
 
-    public TaskGroup(TaskGroup copyTarget)
+    public SubtaskGroup(SubtaskGroup copyTarget)
     {
         tasks = copyTarget.Tasks.Select(x => Object.Instantiate(x)).ToArray();
     }
